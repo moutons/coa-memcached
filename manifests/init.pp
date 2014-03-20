@@ -1,6 +1,5 @@
 # CoA Memcached Module
 class coa-memcached {
-  class { '::coa-memcached::config': } ->
-  class { '::coa-memcached::service': } ->
-  Class['coa-memcached']
+  include coa-memcached::config
+  include coa-memcached::service
 }
